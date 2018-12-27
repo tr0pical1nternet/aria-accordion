@@ -1,17 +1,21 @@
 <!DOCTYPE html>
+<!-- This is project to learn some crucial points of web accessibility, by creating an accordion that includes
+     keyboard navigation and also showing/hiding info to screen readers. It borrows almost entirely from
+     https://www.w3.org/TR/wai-aria-practices/examples/accordion/accordion.html
+-->
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="accordion-demo.css">
-    <script src="accordion-demo.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Aria Accordion</title>
 </head>
 <body>
-    <dl id="portfolio" role="presentation" class="accordion">
+    <dl id="portfolio" role="presentation" class="accordion" data-allow-toggle>
         <dt role="heading" aria-level="3">
-            <button aria-expanded="false"
+            <button aria-expanded="true"
                     class="accordion-trigger"
                     aria-controls="section-1"
                     id="accordion1id"
@@ -75,5 +79,8 @@
             </div>
         </dd>
     </dl>
+    <footer>
+        <script src="accordion.js"></script>
+    </footer>
 </body>
 </html>

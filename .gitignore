@@ -1,4 +1,5 @@
-accordion-demo.html
-accordion-demo.js
+accordion-demo.*
 node_modules
 package-lock.json
+package.json
+.*
