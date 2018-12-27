@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="accordion-demo.css">
+    <script src="accordion-demo.js"></script>
+    <title>Aria Accordion</title>
+</head>
+<body>
+    <dl id="portfolio" role="presentation" class="accordion">
+        <dt role="heading" aria-level="3">
+            <button aria-expanded="false"
+                    class="accordion-trigger"
+                    aria-controls="section-1"
+                    id="accordion1id"
+                    type="button">
+                <span class="accordion-title">
+                    Section 1
+                </span>
+                <span class="accordion-icon"></span>
+            </button>
+        </dt>
+        <dd id="section-1"
+            role="region"
+            aria-labelledby="accordion1id"
+            class="accordion-panel">
+            <div>
+                <p>Section 1 Contents</p>
+            </div>
+        </dd>
+
+        <dt role="heading" aria-level="3">
+            <button aria-expanded="false"
+                    class="accordion-trigger"
+                    aria-controls="section-2"
+                    id="accordion2id"
+                    type="button">
+                <span class="accordion-title">
+                    Section 2
+                </span>
+                <span class="accordion-icon"></span>
+            </button>
+        </dt>
+        <dd id="section-2"
+            role="region"
+            aria-labelledby="accordion2id"
+            class="accordion-panel"
+            hidden="">
+            <div>
+                <p>Section 2 Contents</p>
+            </div>
+        </dd>
+
+        <dt role="heading" aria-level="3">
+            <button aria-expanded="true"
+                    class="accordion-trigger"
+                    aria-controls="section-3"
+                    id="accordion3id"
+                    type="button">
+                <span class="accordion-title">
+                    Section 3
+                </span>
+                <span class="accordion-icon"></span>
+            </button>
+        </dt>
+        <dd id="section-3"
+            role="region"
+            aria-labelledby="accordion3id"
+            class="accordion-panel"
+            hidden="">
+            <div>
+                <p>Section 3 Contents</p>
+            </div>
+        </dd>
+    </dl>
+</body>
+</html>
